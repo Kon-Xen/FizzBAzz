@@ -11,39 +11,39 @@
 // If a number is a multiple of 17, reverse the order in which any fizzes, buzzes, bangs etc. are printed. (E.g. 3 * 5 * 17 = 255: "BuzzFizz") - use a pattern?
 
 
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 200; i++) {
     let multOf_3 = !!(i % 3);   // Fizz with 5 = FizzBuzz
-    let output_a = 'Fizz';
+    let fizz = 'Fizz';
     let multOf_5 = !!(i % 5);   // Bazz with 3 = FizBuzz
-    let output_b = 'Buzz';
+    let buzz = 'Buzz';
     let multOf_7 = !!(i % 7);   // Bang
-    let output_c = 'Bang';
+    let bang = 'Bang';
     let multOf_11 = !!(i % 11); // Bong !! Plays Solo
-    let output_d = 'Bong';
+    let bong = 'Bong';
     let multOf_13 = !!(i % 13); // Fezz Also likes 5 + 7  but plays  first - FezzBazz, FezzBang
-    let output_e = 'Fezz';
+    let fezz = 'Fezz';
     let multOf_17 = !!(i % 17); // reverses order of combined outputs layout - Need to store output to an array /object ?
 
     if (!multOf_11) {
         if (multOf_3 && multOf_5) {
-            console.log(output_a + output_b + ' test:' + i);
+            console.log(fizz + buzz + ' test:' + i);
         } else if (multOf_13 && multOf_5) {
-            console.log(output_e + output_b + ' test:' + i);
+            console.log(fezz + buzz + ' test:' + i);
         } else if (multOf_13 && multOf_7) {
-            console.log(output_e + output_c + ' test:' + i);
+            console.log(fezz + bang + ' test:' + i);
         } else if (multOf_3) {
-            console.log(output_a + ' test:' + i);
+            console.log(fizz + ' test:' + i);
         } else if (multOf_5) {
-            console.log(output_b + ' test:' + i);
+            console.log(buzz + ' test:' + i);
         } else if (multOf_7) {
-            console.log(output_c + ' test:' + i);
+            console.log(bang + ' test:' + i);
         } else if (multOf_13) {
-            console.log(output_e + ' test:' + i);
+            console.log(fezz + ' test:' + i);
         } else {
             console.log(i);
         }
     } else {
-        console.log(output_d + ' test: ' + i);
+        console.log(bong + ' test: ' + i);
     }
 }
 
